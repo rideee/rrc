@@ -2,9 +2,9 @@
 #
 # This function sets $PS1 environment variable.
 
-PROMPT_COMMAND=rrc::ps1
-
 function rrc::ps1() {
+  # TODO: It is a good idea to implement configuration flags.
+
   local ps1_errCode="$?"
 
   local ps1_ecArrow="\[\033[38;5;2m\]➥\[$(tput sgr0)\]" # Exit code 0 arrow
