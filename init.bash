@@ -31,7 +31,9 @@ for f in $RRC_FUNC_DIR/*; do [[ -f $f ]] && . $f; done
 for f in $RRC_CONF_DIR/*; do [[ -f $f ]] && . $f; done
 
 # import custom user configuration files, best place for overriding defaults.
-for f in $RRC_USR_DIR/*; do [[ -f $f ]] && [[ $f != 'README.md' ]] && . $f; done
+for f in $RRC_USR_DIR/*; do [[ -f $f ]] &&
+  [[ $(basename $f) != 'README.md' ]] &&
+  . $f; done
 
 # Import completion files.
 for f in $RRC_COMPLETIONS_DIR/*; do [[ -f $f ]] && . $f; done
