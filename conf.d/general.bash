@@ -3,4 +3,4 @@
 # General configuration file.
 
 # Set PS1.
-PROMPT_COMMAND=rrc::ps1
+PROMPT_COMMAND='rrc::ps1 simplify'

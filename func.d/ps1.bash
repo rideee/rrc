@@ -3,8 +3,6 @@
 # This function sets $PS1 environment variable.
 
 function rrc::ps1() {
-  # TODO: It is a good idea to implement configuration flags.
-
   local ps1_errCode="$?"
 
   local ps1_ecArrow="\[\033[38;5;2m\]➥\[$(tput sgr0)\]" # Exit code 0 arrow
@@ -40,5 +38,9 @@ function rrc::ps1() {
     fi
   fi
 
-  export PS1="${ps1_ecArrow}${ps1_git} ${ps1_usr_host} ${ps1_path} ${ps1_promChar} "
+  # TODO: It is a good idea to implement configuration flags.
+  # If $1 == simplify then remove user and hostname.
+  [[ $1 == 'simplify' ]] &&
+    export PS1="${ps1_ecArrow}${ps1_git} ${ps1_path} ${ps1_promChar} " ||
+    export PS1="${ps1_ecArrow}${ps1_git} ${ps1_usr_host} ${ps1_path} ${ps1_promChar} "
 }
