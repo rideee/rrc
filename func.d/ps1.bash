@@ -15,7 +15,7 @@ function rrc::ps1() {
   local ps1_arrow="\[\033[38;5;4m\]➜\[$(tput sgr0)\]"
   local ps1_usr="\[$(tput bold)\]\[\033[38;5;12m\]\u\[$(tput sgr0)\]"
   local ps1_host="\[$(tput bold)\]\[\033[38;5;12m\]\h\[$(tput sgr0)\]"
-  local ps1_path="\[\033[38;5;11m\]\w\[$(tput sgr0)\]"
+  local ps1_path="\[\033[38;5;11m\]\W\[$(tput sgr0)\]"
   local ps1_promChar="\[$(tput bold)\]\[\033[38;5;12m\]\$\[$(tput sgr0)\]"
 
   # Check if root.
@@ -24,7 +24,7 @@ function rrc::ps1() {
     ps1_promChar="\[$(tput bold)\]\[\033[38;5;9m\]\$\[$(tput sgr0)\]"
   fi
 
-  local ps1_usr_host="${ps1_usr} ${ps1_arrow} ${ps1_host}"
+  local ps1_usr_host="${ps1_host}${ps1_arrow} ${ps1_usr}"
 
   # If git in PATH.
   if [ "$(type git 2>/dev/null)" ]; then
