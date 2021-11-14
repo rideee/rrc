@@ -7,6 +7,7 @@ alias ':q'='exit'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
+alias hg='history | grep'
 
 alias ls='ls --color=auto'
 alias l='ls -1'
