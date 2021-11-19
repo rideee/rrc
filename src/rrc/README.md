@@ -1,3 +1,3 @@
-# Path: 'rrc/src/rrc'
+# $RRC_DIR/src/rrc
 
-This directory containing all internal rrc scripts.
+This directory contain all internal rrc scripts.
