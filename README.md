@@ -25,7 +25,7 @@ You can easily overwrite the default settings by adding your own files to the
 usr.d directory. For example:
 
 <pre>
-  $ echo "PROMPT_COMMAND='rrc::ps1 simplify'" > $HOME/.rrc/usr.d/custom-ps1.bash
+  $ echo "PROMPT_COMMAND='rrc::ps1 simplify'" > $RRC_USR_DIR/custom-ps1.bash
 </pre>
 
 Source the init.bash again (you can use reload alias) and now the PS1
