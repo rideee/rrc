@@ -17,6 +17,7 @@ export RRC_CONF_DIR="$RRC_DIR/conf.d"
 export RRC_FUNC_DIR="$RRC_DIR/func.d"
 export RRC_MAN_DIR="$RRC_DIR/man"
 export RRC_USR_DIR="$RRC_DIR/usr.d"
+export RRC_SRC_DIR="$RRC_DIR/src"
 
 # Add bin dir to PATH.
 [[ $(echo $PATH | grep "$RRC_BIN_DIR") ]] || export PATH="$PATH:$RRC_BIN_DIR"
