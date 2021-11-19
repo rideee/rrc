@@ -7,7 +7,7 @@
 #################################################
 
 # If not running interactively, don't do anything.
-# [[ $- != *i* ]] && return   #TODO: Uncomment this line.
+[[ $- != *i* ]] && return
 
 # Set the rrc directories.
 export RRC_DIR=$(dirname ${BASH_SOURCE[0]})
