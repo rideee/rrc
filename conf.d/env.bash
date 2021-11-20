@@ -2,6 +2,10 @@
 #
 # Couple of sets environment variables.
 
+# Other, less critical, RRC_* definitions.
+# RRC_DATE_FORMAT is the default date format which is used e.g during err logs.
+export RRC_DATE_FORMAT="%d/%m/%Y %a %H:%M"
+
 # English terminal output.
 export LC_MESSAGES=C
 
