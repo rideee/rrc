@@ -24,5 +24,5 @@ alias ....='cd ../../..'
 # Re-source .rrc/init.bash.
 [ -f "$RRC_DIR/init.bash" ] && alias reload=". $RRC_DIR/init.bash"
 
-# If EDITOR not empty, vi as an alias.
-[ ! -z "$EDITOR" ] && alias vi='$EDITOR'
+# vi as an alias to the default editor.
+alias vi='$EDITOR'
