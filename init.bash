@@ -9,32 +9,35 @@
 # If not running interactively, don't do anything.
 [[ $- != *i* ]] && return
 
-# Set required environment variables.
-# RRC_DIR is a root directory.
+# RRC_DIR stores path to root rrc directory.
 export RRC_DIR=$(dirname ${BASH_SOURCE[0]})
 
-# RRC_DIR related.
-export RRC_BIN_DIR="$RRC_DIR/bin"
-export RRC_COMPLETION_DIR="$RRC_DIR/completion.d"
-export RRC_CONF_DIR="$RRC_DIR/conf.d"
+# RRC_FUNC_DIR stores path to func.d drop-in directory.
 export RRC_FUNC_DIR="$RRC_DIR/func.d"
-export RRC_MAN_DIR="$RRC_DIR/man"
+
+# RRC_CONF_DIR stores path to conf.d drop-in directory.
+export RRC_CONF_DIR="$RRC_DIR/conf.d"
+
+# RRC_USR_DIR stores path to usr.d drop-in directory.
 export RRC_USR_DIR="$RRC_DIR/usr.d"
 
-# RRC_SRC_DIR related.
-export RRC_SRC_DIR="$RRC_DIR/src"
-export RRC_SHARED_DIR="$RRC_SRC_DIR/rrc/shared"
+# RRC_COMPLETION_DIR stores path to completion.d drop-in directory.
+export RRC_COMPLETION_DIR="$RRC_DIR/completion.d"
 
-# Add bin dir to PATH.
+# RRC_BIN_DIR stores path to bin directory.
+export RRC_BIN_DIR="$RRC_DIR/bin"
+
+# Add bin directory to PATH.
 [[ $(echo $PATH | grep "$RRC_BIN_DIR") ]] || export PATH="$PATH:$RRC_BIN_DIR"
 
-# Import func files.
+# Import function files.
 for f in $RRC_FUNC_DIR/*; do [[ -f $f ]] && . $f; done
 
-# Import conf files.
+# Import confg files.
 for f in $RRC_CONF_DIR/*; do [[ -f $f ]] && . $f; done
 
-# import custom user configuration files, best place for overriding defaults.
+# Import custom users config files.
+# The best place for overwriting defaults.
 for f in $RRC_USR_DIR/*; do [[ -f $f ]] &&
   [[ $(basename $f) != 'README.md' ]] &&
   . $f; done
