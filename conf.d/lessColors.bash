@@ -1,4 +1,4 @@
-# .rrc/conf.d/less-colors.bash
+# .rrc/conf.d/lessColors.bash
 #
 # Set colors for less manpager.
 
