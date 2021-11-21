@@ -9,3 +9,5 @@
 # Author: Michał Kątnik (https://github.com/rideee)
 #
 # Tests related to $RRC_SHARED_DIR/bash-strict-mode.bash.
+
+# TODO: write tests.
