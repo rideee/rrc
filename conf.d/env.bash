@@ -7,7 +7,7 @@
 export RRC_SRC_DIR="$RRC_DIR/src"
 
 # RRC_TEST_DIR stores path to 'test' directory, where test files are stored.
-export RRC_TEST_DIR="$RRC_SRC_DIR/test"
+export RRC_TEST_DIR="$RRC_DIR/test"
 
 # RRC_SHARED_DIR stores path to 'shared' directory, where shared files
 # are stored, which are ready to be imported from other scripts.
