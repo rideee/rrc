@@ -111,7 +111,7 @@ if [[ $- =~ i ]]; then
 
   # CTRL-J - cd into the selected directory
   bind -m emacs-standard '"\C-j": " \C-b\C-k \C-u`__fzf_cd__`\e\C-e\er\C-m\C-y\C-h\e \C-y\ey\C-x\C-x\C-d"'
-  bind -m vi-command '"\C-j": "\C-z\ec\C-z"'
-  bind -m vi-insert '"\C-j": "\C-z\ec\C-z"'
+  # bind -m vi-command '"\C-j": "\C-z\ec\C-z"'
+  # bind -m vi-insert '"\C-j": "\C-z\ec\C-z"'
 
 fi
