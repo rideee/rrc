@@ -1,4 +1,4 @@
-# .rrc/func.d/ps1.bash
+# $RRC_DIR/func.d/ps1.bash
 #
 # This function sets $PS1 environment variable.
 

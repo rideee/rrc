@@ -1,3 +1,11 @@
+# $RRC_DIR/func.d/fzf-marks.bash
+#
+# fzf-marks (https://github.com/urbainvaes/fzf-marks)
+#
+# This plugin can be used to create, delete, and navigate marks in bash and zsh.
+# It depends on Junegunn Choi's fuzzy-finder fzf.
+# (https://github.com/junegunn/fzf)
+
 # MIT License
 
 # Copyright (c) 2018 Urbain Vaes

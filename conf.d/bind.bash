@@ -1,4 +1,4 @@
-# .rrc/conf.d/bind.bash
+# $RRC_DIR/conf.d/bind.bash
 #
 # Binding setting file.
 

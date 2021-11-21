@@ -1,6 +1,6 @@
-# .rrc/conf.d/alias.bash
+# $RRC_DIR/conf.d/alias.bash
 #
-# General aliases
+# General aliases definitions.
 
 alias ':q'='exit'
 
@@ -21,7 +21,7 @@ alias ....='cd ../../..'
 [ "$(type tree 2>/dev/null)" ] && alias tree='tree -C'
 [ "$(type tree 2>/dev/null)" ] && alias l='tree -L 1'
 
-# Re-source .rrc/init.bash.
+# Re-source $RRC_DIR/init.bash.
 [ -f "$RRC_DIR/init.bash" ] && alias reload=". $RRC_DIR/init.bash"
 
 # vi as an alias to the default editor.
