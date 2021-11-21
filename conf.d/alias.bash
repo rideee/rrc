@@ -18,11 +18,10 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 # If tree in PATH.
-[ "$(type tree 2>/dev/null)" ] && alias tree='tree -C'
-[ "$(type tree 2>/dev/null)" ] && alias l='tree -L 1'
+[[ $(type tree 2>/dev/null) ]] && alias tree='tree -C' && alias l='tree -L 1'
 
 # Re-source $RRC_DIR/init.bash.
-[ -f "$RRC_DIR/init.bash" ] && alias reload=". $RRC_DIR/init.bash"
+[[ -f "$RRC_DIR/init.bash" ]] && alias reload='. $RRC_DIR/init.bash'
 
 # vi as an alias to the default editor.
 alias vi='$EDITOR'
