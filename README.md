@@ -9,7 +9,7 @@
   (if fzf is installed).
 - Uses [fzf-marks](https://github.com/urbainvaes/fzf-marks) (if fzf is
   installed).
-- Uses a lot of completions which have been found somewhere in web. Most of it
+- Uses a lot of completions which have been found somewhere in web. Most of them
   were copied from [oh-my-bash](https://github.com/ohmybash/oh-my-bash).
 
 <hr>
