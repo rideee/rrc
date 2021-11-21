@@ -49,7 +49,7 @@ function printError() {
     dateNow=$(date +"$RRC_DATE_FORMAT") ||
     dateNow=$(date -u)
 
-  echo "ERROR [$dateNow] -> $scriptName:" $@ >&2
+  echo "ERROR [$dateNow] -> $scriptName:" "$@" >&2
 }
 
 # import tries to source provided external file. If this file not exist,
@@ -65,14 +65,12 @@ function import() {
     exit $ERR_FILE_NOT_EXIST
 
   # If exist, sources it.
-  . $file
+  # shellcheck source=/dev/null
+  . "$file"
 }
 
-# Flags definition.
-FLAG_SHOW_HELP="false"
-
 # Argument parser.
-for arg in ${@}; do
+for arg in "$@"; do
 
   # If starts with '-'.
   if [[ $arg =~ ^- ]]; then
