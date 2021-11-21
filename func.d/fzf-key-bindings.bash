@@ -6,14 +6,15 @@
 #
 # CTRL-T -> Paste the selected file path into the command line.
 # CTRL-R -> Paste the selected command from history into the command line.
-# CTRL-J -> cd into the selected directory.
+
+# shellcheck disable=all
 
 # If fzf not in path.
 [[ $(type fzf 2>/dev/null) ]] || return
 
 # Print printKeyBindings.
 fzf::printKeyBindings() {
-  head -9 "$RRC_FUNC_DIR/fzf-key-bindings.bash" | awk '{gsub("# ",""); gsub("#",""); print}'
+  head -8 "$RRC_FUNC_DIR/fzf-key-bindings.bash" | awk '{gsub("# ",""); gsub("#",""); print}'
 }
 
 # (EXPERIMENTAL) Advanced customization of fzf options via _fzf_comprun function
@@ -110,7 +111,7 @@ if [[ $- =~ i ]]; then
   fi
 
   # CTRL-J - cd into the selected directory
-  bind -m emacs-standard '"\C-j": " \C-b\C-k \C-u`__fzf_cd__`\e\C-e\er\C-m\C-y\C-h\e \C-y\ey\C-x\C-x\C-d"'
+  # bind -m emacs-standard '"\C-j": " \C-b\C-k \C-u`__fzf_cd__`\e\C-e\er\C-m\C-y\C-h\e \C-y\ey\C-x\C-x\C-d"'
   # bind -m vi-command '"\C-j": "\C-z\ec\C-z"'
   # bind -m vi-insert '"\C-j": "\C-z\ec\C-z"'
 
