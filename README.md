@@ -2,7 +2,6 @@
 
 ## My BASH dotty files
 
-- Uses [oh-my-bash](https://github.com/ohmybash/oh-my-bash) completions.
 - Uses [fff](https://github.com/dylanaraps/fff) file manager.
 - Uses [ansi](http://github.com/fidian/ansi) ANSI Code Generator.
 - Uses
@@ -10,6 +9,7 @@
   (if fzf is installed).
 - Uses [fzf-marks](https://github.com/urbainvaes/fzf-marks) (if fzf is
   installed).
+- Uses a lot of completions, most founded somewhere.
 
 <hr>
 
