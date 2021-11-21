@@ -5,6 +5,9 @@
 - Uses [oh-my-bash](https://github.com/ohmybash/oh-my-bash) completions.
 - Uses [fff](https://github.com/dylanaraps/fff) file manager.
 - Uses [ansi](http://github.com/fidian/ansi) ANSI Code Generator.
+- Uses
+  [fzf key-bindings](https://github.com/junegunn/fzf/blob/master/shell/key-bindings.bash)
+  (if fzf is installed).
 - Uses [fzf-marks](https://github.com/urbainvaes/fzf-marks) (if fzf is
   installed).
 
