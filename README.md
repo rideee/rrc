@@ -11,8 +11,6 @@
   installed).
 - Uses a lot of completions which have been found somewhere in web. <br>Most of
   them were copied from [oh-my-bash](https://github.com/ohmybash/oh-my-bash).
-- Uses [Bats](https://github.com/bats-core/bats-core) Bash Automated Testing
-  System.
 
 <hr>
 
