@@ -1,17 +1,14 @@
 #!/usr/bin/env bash
+# $RRC_SRC_DIR/rrc_builtin/import/import.bash
 #
 # Name: rrc::import
+#
 # Part of rrc (https://github.com/rideee/rrc)
-#
-# This script allows import external files.
-#
-# https://github.com/rideee/rrc/src/rrc/import
-# See the README.md file for more information.
-#
 # Author: Michał Kątnik (https://github.com/rideee)
 #
+# This script allows import external files.
 
-# Name with rrc:: prefix to avoid name conflicts.
+# Name with 'rrc::' prefix to avoid name conflicts.
 scriptName='rrc::import'
 
 # Exit error codes definition.

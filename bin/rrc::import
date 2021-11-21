@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #
 # rrc::import runs script from SRC.
-$RRC_SRC_DIR/rrc/import/import.bash ${@}
+$RRC_SRC_DIR/rrc_builtin/import/import.bash ${@}

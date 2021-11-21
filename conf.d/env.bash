@@ -1,12 +1,17 @@
-# env.bash
+# $RRC_DIR/conf.d/env.bash
 #
 # Environment variables definitions.
 
-# RRC_SRC_DIR stores path to src directory.
+# RRC_SRC_DIR stores path to src directory where are stored source files for
+# scripts.
 export RRC_SRC_DIR="$RRC_DIR/src"
 
-# RRC_SHARED_DIR stores path to src directory.
-export RRC_SHARED_DIR="$RRC_SRC_DIR/rrc/shared"
+# RRC_TEST_DIR stores path to 'test' directory, where test files are stored.
+export RRC_TEST_DIR="$RRC_SRC_DIR/test"
+
+# RRC_SHARED_DIR stores path to 'shared' directory, where shared files
+# are stored, which are ready to be imported from other scripts.
+export RRC_SHARED_DIR="$RRC_SRC_DIR/rrc_builtin/shared"
 
 # RRC_MAN_DIR stores path to man directory.
 export RRC_MAN_DIR="$RRC_DIR/man"
