@@ -5,9 +5,9 @@
 function rrc::ps1() {
   local ps1_errCode="$?"
 
-  local ps1_ecArrow="\[\033[38;5;2m\]➥\[$(tput sgr0)\]" # Exit code 0 arrow
+  local ps1_ecArrow="\[\033[38;5;2m\]√\[$(tput sgr0)\]" # Exit code 0 arrow
   [ "$ps1_errCode" != 0 ] &&
-    ps1_ecArrow="\[\033[38;5;1m\]➥\[$(tput sgr0)\]" # Exit code !0 arrow
+    ps1_ecArrow="\[\033[38;5;1m\]ε:${ps1_errCode}\[$(tput sgr0)\]" # Exit code !0 arrow
 
   local ps1_gitArrow="\[\033[38;5;86m\]↳\[$(tput sgr0)\]"
   local ps1_arrow="\[\033[38;5;4m\]➜\[$(tput sgr0)\]"
