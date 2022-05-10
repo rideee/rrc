@@ -19,9 +19,9 @@ function rrc::ps1() {
   local ps1_gitBranch
   local ps1_git
 
-  ps1_exitCode="\[\033[38;5;2m\]√\[$(tput sgr0)\]" # Exit code 0 arrow
+  ps1_exitCode="\[\033[38;5;84m\]√\[$(tput sgr0)\]" # Exit code 0 arrow
   [ "$ps1_errCode" != 0 ] &&
-    ps1_exitCode="\[\033[38;5;1m\]ε:${ps1_errCode}\[$(tput sgr0)\]" # EC !0
+    ps1_exitCode="\[\033[38;5;9m\]${ps1_errCode}\[$(tput sgr0)\]" # EC !0
 
   ps1_gitArrow="\[\033[38;5;86m\]↳\[$(tput sgr0)\]"
   ps1_separator="\[\033[38;5;4m\]@\[$(tput sgr0)\]"
@@ -34,7 +34,7 @@ function rrc::ps1() {
   # Check if root.
   if [[ $EUID -eq 0 ]]; then
     ps1_usr="\[$(tput bold)\]\[\033[38;5;9m\]\u\[$(tput sgr0)\]"
-    ps1_promChar="\[$(tput bold)\]\[\033[38;5;9m\]\$\[$(tput sgr0)\]"
+    ps1_promChar="\[$(tput bold)\]\[\033[38;5;9m\]\\$\[$(tput sgr0)\]"
   fi
 
   ps1_usr_host="${ps1_usr}${ps1_separator}${ps1_host}"

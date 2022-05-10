@@ -31,3 +31,10 @@ type vim &>/dev/null && export EDITOR='vim'
 
 # If exists, set NeoVim as default editor.
 type nvim &>/dev/null && export EDITOR='nvim'
+
+# If dir exists, add ~/.local/bin to the PATH.
+if [[ -d "$HOME/.local/bin" ]]; then
+  if ! grep -c "$HOME/.local/bin" <(echo "$PATH") &> /dev/null; then
+    export PATH="$PATH:$HOME/.local/bin"
+  fi
+fi
