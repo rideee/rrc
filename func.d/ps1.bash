@@ -18,6 +18,7 @@ function rrc::ps1() {
   local ps1_usr_host
   local ps1_gitBranch
   local ps1_git
+  local ps1_venv
 
   ps1_exitCode="\[\033[38;5;84m\]√\[$(tput sgr0)\]" # Exit code 0 arrow
   [ "$ps1_errCode" != 0 ] &&
@@ -53,11 +54,17 @@ function rrc::ps1() {
     fi
   fi
 
-  # TODO: Implement themes.
+  # Python virtual environments.
+  ps1_venv=''
+  if [[ -n $VIRTUAL_ENV ]]; then
+    ps1_venv=" \[\033[38;5;9m\]$(basename "$VIRTUAL_ENV")\[$(tput sgr0)\]"
+  fi
+
   # If $1 == simplify then remove user and hostname.
   if [[ $1 == 'simplify' ]]; then
-    export PS1="${ps1_exitCode}${ps1_git} ${ps1_dirname} ${ps1_promChar} "
+    export PS1="${ps1_exitCode}${ps1_venv}${ps1_git} ${ps1_dirname} ${ps1_promChar} "
   else
-    export PS1="${ps1_exitCode}${ps1_git} ${ps1_usr_host} ${ps1_path} ${ps1_promChar} "
+    export PS1="${ps1_exitCode}${ps1_venv}${ps1_git} ${ps1_usr_host} ${ps1_path} ${ps1_promChar} "
   fi
 }
+
